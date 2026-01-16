@@ -51,17 +51,17 @@ The supported instruction set includes:
 vhdl-simple-processor/
 ├── README.md
 └── src/
-├── v1/
-│ ├── proc.vhd # Processor (version 1)
-│ ├── registre.vhd # Generic register
-│ ├── mux.vhd # Bus multiplexer
-│ ├── add_sub.vhd # Adder / Subtractor
-│ └── dec3to8.vhd # Decoder
-│
-└── v2/
-├── proc_v2.vhd # Processor (version 2)
-├── counter.vhd # Program counter
-└── memory.vhd # ROM memory
+    ├── v1/
+    │   ├── proc.vhd        # Processor (version 1)
+    │   ├── registre.vhd    # Generic register
+    │   ├── mux.vhd         # Bus multiplexer
+    │   ├── add_sub.vhd     # Adder / S_
+    ├── v1/
+    │   ├── proc.vhd        # Processor (version 1)
+    │   ├── registre.vhd    # Generic register
+    │   ├── mux.vhd         # Bus multiplexer
+    │   ├── add_sub.vhd     # Adder / S_
+    
 
 ---
 
