@@ -48,8 +48,8 @@ process
 begin
 -- Initialisation des valeurs pour R0T, R1T, R2T, etc.
 DinT <= "011100000";
-R0T <= "000000001";  -- Exemple de données pour R0
-R1T <= "000000010";  -- Exemple de données pour R1
+R0T <= "000000001";  -- Exemple de donnÃ©es pour R0
+R1T <= "000000010";  -- Exemple de donnÃ©es pour R1
 R2T <= "000000011";
 R3T <= "100000010";
 R4T <= "101000000";
