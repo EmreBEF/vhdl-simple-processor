@@ -5,8 +5,8 @@ USE IEEE.numeric_std.all;
 ENTITY memory IS
 PORT(
 addr   : IN  STD_LOGIC_VECTOR(4 DOWNTO 0);  -- 5 bits pour l'adresse (32 cases)
-Clock : IN  STD_LOGIC;                      -- Horloge pour la mémoire
-data   : OUT STD_LOGIC_VECTOR(8 DOWNTO 0)    -- Données de 9 bits
+Clock : IN  STD_LOGIC;                      -- Horloge pour la mÃ©moire
+data   : OUT STD_LOGIC_VECTOR(8 DOWNTO 0)    -- DonnÃ©es de 9 bits
 );
 
 END memory;
@@ -15,7 +15,7 @@ ARCHITECTURE ROM_str of memory IS
     type ROM_type is array(31 DOWNTO 0) of std_logic_vector(8 DOWNTO 0);
     signal ROM: ROM_type;
 begin
-    -- Remplir la mémoire avec des valeurs intéressantes
+    -- Remplir la mÃ©moire avec des valeurs intÃ©ressantes
     ROM(31) <= "000000000";  )
     ROM(30) <= "000000001";  
     ROM(29) <= "000000010";  
@@ -74,7 +74,7 @@ begin
 DUT: Entity work.memory(ROM_str)
 port map(addr=>addr_T, data=>data_T, Clock=>Clock_T);
 
--- Début du processus de test --
+-- DÃ©but du processus de test --
 
 MClock_T_process : process
 begin
