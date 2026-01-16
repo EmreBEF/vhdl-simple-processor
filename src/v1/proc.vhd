@@ -40,7 +40,7 @@ begin
 DUT: Entity work.add_sub(additionneur_soustracteur)
 port map(A=>AT, B=>BT, S=>ST, Addsub=>Addsub_T);
 
--- Début du processus de test --
+-- DÃ©but du processus de test --
 process
 begin
 
@@ -54,19 +54,19 @@ AT <= "100011110";
 BT <= "001110000";
 wait for 10 ns;
 
--- Résultat attendu 000111111(63) --
+-- RÃ©sultat attendu 000111111(63) --
 Addsub_T <= '0';
 AT <= "000101010";
 BT <= "000010101";
 wait for 10 ns;
 
--- Résultat attendu 000000000(troncature, bit de poids fort perdu) --
+-- RÃ©sultat attendu 000000000(troncature, bit de poids fort perdu) --
 Addsub_T <= '0';
 AT <= "111111111";
 BT <= "000000001";
 wait for 10 ns;
 
--- Résultat attendu 001000000(64) --
+-- RÃ©sultat attendu 001000000(64) --
 Addsub_T <= '1';
 AT <= "100000000";
 BT <= "011000000";
