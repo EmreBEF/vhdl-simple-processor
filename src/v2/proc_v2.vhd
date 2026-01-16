@@ -46,7 +46,7 @@ ARCHITECTURE Behavior OF proc_v2 IS
     SIGNAL BusWires_int : STD_LOGIC_VECTOR(8 DOWNTO 0);
 
     --------------------------------------------------------------------
-    -- Mémoire, Compteur
+    -- MÃ©moire, Compteur
     --------------------------------------------------------------------
     SIGNAL PC : STD_LOGIC_VECTOR(4 DOWNTO 0);
     SIGNAL DIN_int : STD_LOGIC_VECTOR (8 DOWNTO 0);
@@ -58,7 +58,7 @@ ARCHITECTURE Behavior OF proc_v2 IS
 
     COMPONENT counter IS
       PORT (
-	Resetn : IN std_logic;                  -- Réinitialisation
+	Resetn : IN std_logic;                  -- RÃ©initialisation
         Clock : IN std_logic;                  -- Horloge
         addr   : OUT std_logic_vector(4 DOWNTO 0)  -- Adresse de sortie (5 bits)
       );
@@ -67,8 +67,8 @@ ARCHITECTURE Behavior OF proc_v2 IS
     COMPONENT memory IS
       PORT (
 	addr   : IN  STD_LOGIC_VECTOR(4 DOWNTO 0);  -- 5 bits pour l'adresse (32 cases)
-	Clock : IN  STD_LOGIC;                      -- Horloge pour la mémoire
-	data   : OUT STD_LOGIC_VECTOR(8 DOWNTO 0)    -- Données de 9 bits
+	Clock : IN  STD_LOGIC;                      -- Horloge pour la mÃ©moire
+	data   : OUT STD_LOGIC_VECTOR(8 DOWNTO 0)    -- DonnÃ©es de 9 bits
       );
     END COMPONENT;
 
@@ -268,7 +268,7 @@ END PROCESS;
 
 
     --------------------------------------------------------------------
-    -- Mémoire, Compteur
+    -- MÃ©moire, Compteur
     --------------------------------------------------------------------
  
 
@@ -334,7 +334,7 @@ BEGIN
     -- Laisser tourner le programme en ROM
     wait for 500 ns;
 
-    -- Arrêter (optionnel)
+    -- ArrÃªter (optionnel)
     Run_T <= '0';
 
     wait;
