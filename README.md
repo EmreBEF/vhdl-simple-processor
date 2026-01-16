@@ -48,19 +48,8 @@ The supported instruction set includes:
 
 ## 🧩 Project Structure
 
-vhdl-simple-processor/
-├── README.md
-└── src/
-    ├── v1/
-    │   ├── proc.vhd        # Processor (version 1)
-    │   ├── registre.vhd    # Generic register
-    │   ├── mux.vhd         # Bus multiplexer
-    │   ├── add_sub.vhd     # Adder / S_
-    ├── v1/
-    │   ├── proc.vhd        # Processor (version 1)
-    │   ├── registre.vhd    # Generic register
-    │   ├── mux.vhd         # Bus multiplexer
-    │   ├── add_sub.vhd     # Adder / S_
+vhdl-simple-processor/ | ├── README.md | ├── src/ | ├── v1/ | ...
+
     
 
 ---
