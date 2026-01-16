@@ -1,7 +1,8 @@
 LIBRARY IEEE;
 USE IEEE.std_logic_1164.all;
 USE IEEE.numeric_std.all;
-
+
+
 ENTITY registre IS
 port(
 Rin,Clk:in std_logic;
