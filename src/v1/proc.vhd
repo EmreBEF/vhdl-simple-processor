@@ -283,7 +283,7 @@ BEGIN
     wait for 10 ns;
   END PROCESS Clock_T_process;
 
-  -- Stimulus (mÍme style que toi : wait for XX ns)
+  -- Stimulus (m√™me style que toi : wait for XX ns)
   PROCESS
   BEGIN
     ------------------------------------------------------------------
@@ -300,15 +300,15 @@ BEGIN
     ------------------------------------------------------------------
     -- 1) mvi R0, #10
     --    T0: DIN = instruction, Run=1 (passe en T1)
-    --    T1: DIN = immÈdiat (chargÈ dans R0)
+    --    T1: DIN = imm√©diat (charg√© dans R0)
     ------------------------------------------------------------------
     Run_T <= '1';
     DIN_T <= "001000000";        -- mvi Rx=# : opcode=001, X=000 (R0), Y=000 (don?t care)
     wait for 20 ns;              -- 1 cycle : T0 -> T1
 
     Run_T <= '0';
-    DIN_T <= "000001010";        -- #10 (immÈdiat lu en T1)
-    wait for 40 ns;              -- laisse revenir ‡ T0 proprement
+    DIN_T <= "000001010";        -- #10 (imm√©diat lu en T1)
+    wait for 40 ns;              -- laisse revenir √† T0 proprement
 
     ------------------------------------------------------------------
     -- 2) mvi R1, #5
@@ -323,28 +323,28 @@ BEGIN
 
     ------------------------------------------------------------------
     -- 3) mv R2, R0   (R2 <- R0)
-    --    mv finit en T1 (1 cycle d?exÈcution)
+    --    mv finit en T1 (1 cycle d?ex√©cution)
     ------------------------------------------------------------------
     Run_T <= '1';
     DIN_T <= "000010000";        -- mv : opcode=000, X=010 (R2), Y=000 (R0)
-    wait for 20 ns;              -- T0 -> T1 (mv exÈcutÈ)
+    wait for 20 ns;              -- T0 -> T1 (mv ex√©cut√©)
     Run_T <= '0';
     wait for 40 ns;              -- retour T0 + marge
 
     ------------------------------------------------------------------
     -- 4) add R0, R1   (R0 <- R0 + R1)
-    --    add prend 3 cycles d?exÈcution : T1, T2, T3
+    --    add prend 3 cycles d?ex√©cution : T1, T2, T3
     ------------------------------------------------------------------
     Run_T <= '1';
     DIN_T <= "010000001";        -- add : opcode=010, X=000 (R0), Y=001 (R1)
     wait for 20 ns;              -- T0 -> T1
     Run_T <= '0';
-    wait for 60 ns;              -- T2 + T3 (2 cycles) => total 3 cycles aprËs T0
+    wait for 60 ns;              -- T2 + T3 (2 cycles) => total 3 cycles apr√®s T0
 
     wait for 40 ns;              -- marge
 
     ------------------------------------------------------------------
-    -- 5) sub R0, R1   (R0 <- R0 - R1) => doit revenir ‡ 10
+    -- 5) sub R0, R1   (R0 <- R0 - R1) => doit revenir √† 10
     --    sub prend aussi 3 cycles
     ------------------------------------------------------------------
     Run_T <= '1';
