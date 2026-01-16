@@ -46,15 +46,6 @@ The supported instruction set includes:
 
 ---
 
-## 🧩 Project Structure
-
-vhdl-simple-processor/
-|--- README.md
-
-    
-
----
-
 ## 🔁 Control Unit
 
 The control unit is implemented as a finite state machine (FSM) with four states:
