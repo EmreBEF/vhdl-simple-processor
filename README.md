@@ -48,7 +48,8 @@ The supported instruction set includes:
 
 ## 🧩 Project Structure
 
-vhdl-simple-processor/ | ├── README.md | ├── src/ | ├── v1/ | ...
+vhdl-simple-processor/
+|--- README.md
 
     
 
